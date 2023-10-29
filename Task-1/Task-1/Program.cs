@@ -94,6 +94,59 @@
 //}
 
 
+int m, n;
+int count = 0;
 
+Console.Write("M-daxil edin: ");
+m = int.Parse(Console.ReadLine());
+Console.Write("N-daxil edin: ");
+n = int.Parse(Console.ReadLine());
+
+if (m < n)
+{
+    for (int i = m; i <= n; i++)
+    {
+        int number = i;
+        int digitSum = 0;
+
+
+        while (number > 0)
+        {
+            digitSum += number % 10;
+            number /= 10;
+        }
+
+
+        if (digitSum % 2 == 0)
+        {
+            count++;
+
+        }
+    }
+}
+if (n < m)
+{
+    for (int i = n; i <= m; i++)
+    {
+        int number = i;
+        int digitSum = 0;
+
+
+        while (number > 0)
+        {
+            digitSum += number % 10;
+            number /= 10;
+        }
+
+
+        if (digitSum % 2 == 0)
+        {
+            count++;
+
+        }
+    }
+}
+
+Console.WriteLine($"M-dən N-ədək ədədlər içində rəqəmləri cəmi cüt olan ədədlərin sayı: {count}");
 
 
